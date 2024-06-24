@@ -23,6 +23,7 @@
 	width: 33px;
 	height: 33px;
 	top: 7px;
+	filter: invert(1);
 }
 
 .wrapper__userActions {
@@ -46,7 +47,9 @@
 	cursor: pointer;
 	padding: 10px 15px;
 	transition: background-color 0.3s ease;
-
+	& > img {
+		filter: invert(1);
+	}
 	&:hover {
 		background-color: rgba($white, 0.4);
 	}
