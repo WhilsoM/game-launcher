@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.Header {
+	padding-top: 10px;
+}
+.input {
+	padding: 15px 8px;
+	padding-right: 37px;
+	border: none;
+	width: 25em;
+	border-radius: 15px;
+	background-color: $lightGray;
+}
+
+.wrapper__input {
+	max-width: 26rem;
+	position: relative;
+}
+
+.search {
+	position: absolute;
+	right: 8px;
+	width: 33px;
+	height: 33px;
+	top: 7px;
+}
+
+.wrapper__userActions {
+	display: flex;
+	gap: 50px;
+}
+.wrapper__inboxNotific {
+	display: flex;
+	gap: 15px;
+
+	img {
+		width: 35px;
+		height: 35px;
+	}
+}
+
+.inboxNotific {
+	background-color: $lightGray;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	padding: 10px 15px;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: rgba($white, 0.4);
+	}
+}

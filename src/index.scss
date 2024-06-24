@@ -1,0 +1,32 @@
+@import './styles/variables.scss';
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	font-family: $ralewayFont;
+	font-weight: 400;
+	max-height: 100vh;
+	max-width: 100%;
+	background-color: $gray;
+	color: $colorFont;
+	font-size: 18px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 5px;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
