@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 // Images
 import categories from './../../assets/img/categories.png'
@@ -11,55 +11,56 @@ import library from './../../assets/img/library.png'
 import settings from './../../assets/img/settings.png'
 import wishlist from './../../assets/img/wishlist.png'
 
-// import Link from '../UI/link/Link'
-// компонент img create
 // Styles
 import classes from './SideBar.module.scss'
+
+const setActive = ({ isActive }) =>
+	isActive ? `${classes.menuItem} ${classes.active}` : `${classes.menuItem}`
 
 const SideBar = () => {
 	return (
 		<aside className={classes.sidebar}>
 			<div className={classes.logo}>GAMINGMOON</div>
 			<nav className={classes.menu}>
-				<Link className={`${classes.menuItem} ${classes.menuItemHover}`}>
+				<NavLink to='/' className={setActive}>
 					<img src={home} alt='home' className={classes.category} />
 					Home
-				</Link>
+				</NavLink>
 
-				<Link className={classes.menuItem}>
+				<NavLink to='/categories' className={setActive}>
 					<img src={categories} alt='categories' className={classes.category} />
 					Category
-				</Link>
-				<Link className={classes.menuItem}>
+				</NavLink>
+				<NavLink to='/library' className={setActive}>
 					<img src={library} alt='library' className={classes.category} />
 					Library
-				</Link>
-				<Link className={classes.menuItem}>
+				</NavLink>
+				<NavLink to='/community' className={setActive}>
 					<img src={community} alt='community' className={classes.category} />
 					Community
-				</Link>
-				<Link className={classes.menuItem}>
+				</NavLink>
+				<NavLink to='/friends' className={setActive}>
 					<img src={friends} alt='friends' className={classes.category} />
 					Friends <span className={classes.badge}>2</span>
-				</Link>
-				<Link className={classes.menuItem}>
+				</NavLink>
+				<NavLink to='/wishlist' className={setActive}>
 					<img src={wishlist} alt='wishlist' className={classes.category} />
 					Wishlist
-				</Link>
-				<Link className={classes.menuItem}>
+				</NavLink>
+				<NavLink to='/downloads' className={setActive}>
 					<img src={donwloads} alt='donwloads' className={classes.category} />
 					Downloads
-				</Link>
+				</NavLink>
 
 				<div className={classes.settingsHelp}>
-					<Link className={classes.menuItem}>
+					<NavLink to='/settings' className={setActive}>
 						<img src={settings} alt='settings' className={classes.category} />
 						Settings
-					</Link>
-					<Link className={classes.menuItem}>
+					</NavLink>
+					<NavLink to='/help' className={setActive}>
 						<img src={help} alt='help' className={classes.category} />
 						Help
-					</Link>
+					</NavLink>
 				</div>
 			</nav>
 			<div className={classes.promo}>

@@ -25,6 +25,13 @@
 	margin-top: 35px;
 }
 
+.category {
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
+	filter: invert(1);
+	transition: filter 0.3s;
+}
 .menuItem {
 	display: flex;
 	align-items: center;
@@ -38,7 +45,7 @@
 }
 
 .menuItem:hover,
-.menuItem.active {
+.active {
 	color: #b33c58;
 
 	.category {
@@ -47,15 +54,6 @@
 	}
 }
 
-.category {
-	width: 35px;
-	height: 35px;
-	margin-right: 10px;
-
-	filter: invert(1);
-
-	transition: filter 0.3s;
-}
 .badge {
 	background-color: #e91e63;
 	color: white;
