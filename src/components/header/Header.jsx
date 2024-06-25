@@ -12,22 +12,21 @@ import classes from './Header.module.scss'
 
 const Header = () => {
 	const location = useLocation()
-	const [avatarFile, setAvatarFile] = useState(null)
-	const [avatarUrl, setAvatarUrl] = useState('')
-	const [isSettingsPage, setIsSettingsPage] = useState(
-		location.pathname === '/settings'
+	const [showUploadButton, setShowUploadButton] = useState(
+		localStorage.getItem('showUploadButton') === 'true' ||
+			location.pathname === '/settings'
 	)
+	const [avatarUrl, setAvatarUrl] = useState(localStorage.getItem('avatarUrl'))
 
 	useEffect(() => {
-		if ((isSettingsPage !== location.pathname) === '/settings') {
-			setIsSettingsPage((current) => !current)
-		}
-	}, [isSettingsPage, setIsSettingsPage])
+		localStorage.setItem('showUploadButton', showUploadButton)
+	}, [showUploadButton])
 
 	const handleImageUpload = (e) => {
 		const file = e.target.files[0]
 		const reader = new FileReader()
 		reader.onload = () => {
+			localStorage.setItem('avatarUrl', reader.result)
 			setAvatarUrl(reader.result)
 		}
 		reader.readAsDataURL(file)
@@ -36,7 +35,7 @@ const Header = () => {
 	return (
 		<header
 			className={`${classes.Header} ${
-				isSettingsPage ? classes.settingsHeader : ''
+				showUploadButton ? classes.settingsHeader : ''
 			}`}
 		>
 			<div className={`container ${classes.wrapper}`}>
@@ -55,8 +54,9 @@ const Header = () => {
 							<img src={notification} alt='notification' />
 						</Button>
 					</div>
+
 					<UserInfo avatarFile={avatarUrl} />
-					{location.pathname === '/settings' && (
+					{showUploadButton && location.pathname === '/settings' && (
 						<div className={classes.input__wrapper}>
 							<label
 								htmlFor='input__file'
@@ -66,7 +66,6 @@ const Header = () => {
 									Choose avatar
 								</span>
 							</label>
-
 							<input
 								id='input__file'
 								type='file'

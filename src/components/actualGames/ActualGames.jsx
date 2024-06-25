@@ -5,7 +5,7 @@ const ActualGames = () => {
 	return (
 		<div className={classes.actualGames}>
 			<div className={classes.info}>
-				<h2 className={classes.title}>Actual Games</h2>
+				<h2>Actual Games</h2>
 			</div>
 
 			<div className={classes.games}>
@@ -14,7 +14,7 @@ const ActualGames = () => {
 						<img className={classes.imgGame} src={game.img} alt={game.title} />
 
 						<div className={classes.infoOfGame}>
-							<p className={classes.gameTitle}>{game.title}</p>{' '}
+							<p className={classes.gameTitle}>{game.title}</p>
 							<p className={classes.gamePrice}>{game.price}$</p>
 						</div>
 					</div>
