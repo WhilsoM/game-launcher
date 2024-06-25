@@ -1,0 +1,36 @@
+@import './../../styles/variables.scss';
+
+.friend {
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: start;
+	gap: 10px;
+	align-items: center;
+}
+.avatar {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+.nickname {
+	font-weight: 600;
+	font-size: 1rem;
+	margin-bottom: 5px;
+}
+
+.playingGame {
+	margin-left: 5px;
+	padding: 5px;
+	font-size: 15px;
+	background-color: $lightGray;
+	max-width: 6.7em;
+}
+.wrapper__playingGame {
+	display: flex;
+	align-items: center;
+
+	& > p:first-of-type {
+		font-size: 17px;
+	}
+}
