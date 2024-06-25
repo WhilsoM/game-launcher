@@ -4,7 +4,7 @@
 	margin-bottom: 15px;
 	display: flex;
 	justify-content: start;
-	gap: 10px;
+	gap: 5px;
 	align-items: center;
 }
 .avatar {
@@ -22,9 +22,8 @@
 .playingGame {
 	margin-left: 5px;
 	padding: 5px;
-	font-size: 15px;
+	font-size: 14px;
 	background-color: $lightGray;
-	max-width: 6.7em;
 }
 .wrapper__playingGame {
 	display: flex;

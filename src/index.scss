@@ -17,6 +17,8 @@ body {
 	background-color: $gray;
 	color: $colorFont;
 	font-size: 18px;
+
+	overflow-y: auto;
 }
 
 .container {
@@ -33,4 +35,8 @@ body {
 
 .hidden {
 	overflow: hidden;
+}
+
+.title {
+	margin-bottom: 30px;
 }

@@ -5,7 +5,7 @@ const ActualGames = () => {
 	return (
 		<div className={classes.actualGames}>
 			<div className={classes.info}>
-				<h2>Actual Games</h2>
+				<h2 className='title'>Actual Games</h2>
 			</div>
 
 			<div className={classes.games}>

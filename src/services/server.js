@@ -40,3 +40,30 @@ export const games = [
 		price: 12,
 	},
 ]
+
+export const friends = [
+	{
+		id: 1,
+		nickname: 'JohnyStephan',
+		playingGame: 'Zelda',
+		avatar: 'https://www.heropack.me/img/styles/survival-man.jpeg',
+	},
+	{
+		id: 2,
+		nickname: 'reginakjl',
+		playingGame: 'Red Dead 2',
+		avatar: 'https://www.heropack.me/img/styles/psycho-man.jpeg',
+	},
+	{
+		id: 3,
+		nickname: 'IceDragon',
+		playingGame: 'The Witcher 3',
+		avatar: 'https://www.heropack.me/img/styles/vampire-illustration-man.jpeg',
+	},
+	{
+		id: 4,
+		nickname: 'moonw',
+		playingGame: 'Cyberpunk 2077',
+		avatar: 'https://www.heropack.me/img/styles/royalty-man.jpeg',
+	},
+]
