@@ -1,5 +1,11 @@
+import ActualGames from '../components/actualGames/ActualGames'
+
 const Home = () => {
-	return <p>Home</p>
+	return (
+		<main>
+			<ActualGames />
+		</main>
+	)
 }
 
 export default Home

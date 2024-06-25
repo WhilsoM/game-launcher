@@ -1,8 +1,20 @@
 @import '../../styles/variables.scss';
+@import '../../index.scss';
 
 .Header {
 	padding-top: 10px;
 }
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.settingsHeader {
+	.wrapper {
+		justify-content: start;
+	}
+}
+
 .input {
 	padding: 15px 8px;
 	padding-right: 37px;
@@ -15,6 +27,7 @@
 .wrapper__input {
 	max-width: 26rem;
 	position: relative;
+	margin-right: 25px;
 }
 
 .search {
@@ -28,7 +41,8 @@
 
 .wrapper__userActions {
 	display: flex;
-	gap: 50px;
+	gap: 30px;
+	align-items: center;
 }
 .wrapper__inboxNotific {
 	display: flex;
@@ -53,4 +67,38 @@
 	&:hover {
 		background-color: rgba($white, 0.4);
 	}
+}
+
+.setAvatar {
+	background-color: transparent;
+	&::placeholder {
+		font: 10px;
+	}
+}
+
+.input__wrapper {
+	position: relative;
+	margin: 15px 0;
+}
+
+.input__file {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.input__fileButtonText {
+	line-height: 1;
+	margin-top: 1px;
+}
+
+.input__fileButton {
+	padding: 15px 20px;
+	background: $gray;
+	border: 1px solid $lightGray;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	border-radius: 13px;
+	cursor: pointer;
 }

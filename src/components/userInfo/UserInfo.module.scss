@@ -1,6 +1,5 @@
 .gameUser {
 	display: flex;
-	align-items: center;
 }
 
 .infoUser {
@@ -16,4 +15,10 @@
 	font-size: 17px;
 	font-weight: 400;
 	margin: 0;
+}
+
+.avatar {
+	width: 45px;
+	height: 45px;
+	object-fit: cover;
 }
