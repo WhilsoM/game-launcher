@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 
 // Images
@@ -20,7 +21,9 @@ const setActive = ({ isActive }) =>
 const SideBar = () => {
 	return (
 		<aside className={classes.sidebar}>
-			<div className={classes.logo}>GAMINGMOON</div>
+			<motion.div className={classes.logo} whileHover={{ scale: 1.1 }}>
+				GAMINGMOON
+			</motion.div>
 			<nav className={classes.menu}>
 				<NavLink to='/' className={setActive}>
 					<img src={home} alt='home' className={classes.category} />
@@ -64,8 +67,14 @@ const SideBar = () => {
 				</div>
 			</nav>
 			<div className={classes.promo}>
-				<p>50% discount on the games in the selection</p>
-				<button className={classes.promoButton}>Go to library</button>
+				<motion.p>50% discount on the games in the selection</motion.p>
+				<motion.button
+					whileHover={{ rotate: 360 }}
+					whileFocus={{ opacity: 0.5 }}
+					className={classes.promoButton}
+				>
+					Go to library
+				</motion.button>
 			</div>
 		</aside>
 	)

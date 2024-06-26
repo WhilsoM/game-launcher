@@ -4,7 +4,7 @@ export const games = [
 		title: 'The Legend of Zelda: Breath of the Wild',
 		description:
 			'Откройте для себя мир Хайрула в этом эпическом приключении, полном загадок и опасностей.',
-		img: 'https://upload.wikimedia.org/wikipedia/ru/3/34/TLoZ_BotW_boxart.png ',
+		img: 'http://surl.li/ghihzz',
 		price: 35,
 	},
 	{
@@ -12,7 +12,7 @@ export const games = [
 		title: 'The Witcher 3: Wild Hunt',
 		description:
 			'Станьте Геральтом из Ривии и отправьтесь в опасное путешествие по миру, полному монстров и магии.',
-		img: 'https://korobok.store/upload/iblock/121/j53hl7ztrytgrvkp6wwq4cvf8m5jkiat.jpg',
+		img: 'http://surl.li/ymzxut',
 		price: 20,
 	},
 	{
@@ -20,7 +20,7 @@ export const games = [
 		title: 'Red Dead Redemption 2',
 		description:
 			'Погрузитесь в атмосферу Дикого Запада и станьте частью банды Артура Моргана в этом захватывающем приключении.',
-		img: 'https://upload.wikimedia.org/wikipedia/ru/thumb/0/03/Red_Dead_Redemption_2_coverart.jpg/220px-Red_Dead_Redemption_2_coverart.jpg',
+		img: 'http://surl.li/bevcfw',
 		price: 17,
 	},
 	{
@@ -28,7 +28,7 @@ export const games = [
 		title: 'Cyberpunk 2077',
 		description:
 			'Исследуйте футуристический город Найт-Сити и станьте наемником в мире высоких технологий и низкой морали.',
-		img: 'https://upload.wikimedia.org/wikipedia/ru/b/bb/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%BE%D0%B9_%D0%B8%D0%B3%D1%80%D1%8B_Cyberpunk_2077.jpg',
+		img: 'http://surl.li/oilorq',
 		price: 15,
 	},
 	{
@@ -36,7 +36,7 @@ export const games = [
 		title: 'Minecraft',
 		description:
 			'Создавайте и исследуйте бесконечные миры, строя все, что только можно вообразить, в этой культовой игре-песочнице.',
-		img: 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png',
+		img: 'http://surl.li/btixhj',
 		price: 12,
 	},
 	{
@@ -44,7 +44,7 @@ export const games = [
 		title: 'Stellar Blade',
 		description:
 			'Игроки берут на себя командование главной героиней Евой, которая решается спасти человечество от беспощадной войны, которую ведут чудовищные существа в далеком будущем .',
-		img: 'https://image.api.playstation.com/vulcan/ap/rnd/202401/2212/281e4a2a7d4db5290f4dbe5c3fbb839315b808c95283e0f3.jpg',
+		img: 'http://surl.li/wrftqi',
 		price: 55,
 	},
 	{
@@ -52,7 +52,7 @@ export const games = [
 		title: 'The Last of Us Part II',
 		description:
 			'Спустя пять лет после страшного путешествия по охваченной эпидемией Америке Элли и Джоэл осели в Джексоне, штат Вайоминг. Обосновавшись в процветающей общине, они обрели желанную стабильность, несмотря на постоянную угрозу нападения зараженных и теряющих смысл жизни выживших.',
-		img: 'https://m.media-amazon.com/images/M/MV5BODUwNWY5YjctNDZkNy00ZTY1LWEzMzItZGVkYTllOWVjOTc3XkEyXkFqcGdeQXVyNjU4NTIxNzI@._V1_FMjpg_UX1000_.jpg',
+		img: 'http://surl.li/faazai',
 		price: 90,
 	},
 	{
@@ -60,7 +60,7 @@ export const games = [
 		title: 'SEKIRO SHADOWS DIE TWICE',
 		description:
 			'жестокий приключенческий боевик от третьего лица, действие которого происходит в кровавой Японии XIV века.',
-		img: 'https://www.sekirothegame.com/content/dam/atvi/sekiro/buy/box-art/4089_d20180531-001_Angled_FOB_Packshots_PC_EN_C_FINAL.png',
+		img: 'http://surl.li/obvnbl',
 		price: 45,
 	},
 	{
@@ -68,7 +68,7 @@ export const games = [
 		title: 'ELDEN RING',
 		description:
 			'Действие игры происходит в Междуземье — стране «за завесой тумана», которой с давних времён правила королева Марика Вечная. В Междуземье воля его правителя определяет саму реальность. ',
-		img: 'https://m.media-amazon.com/images/I/71lS5rBEFmL._SL1500_.jpg',
+		img: 'http://surl.li/bzmafs',
 		price: 31,
 	},
 ]
@@ -99,3 +99,24 @@ export const friends = [
 		avatar: 'https://www.heropack.me/img/styles/royalty-man.jpeg',
 	},
 ]
+
+export const videos = [
+	{
+		id: 1,
+		url: 'https://www.youtube.com/watch?v=wYW07LpGhYE&ab_channel=DvaPointGames',
+		title: 'Cyberpank 2077',
+		description:
+			'Исследуйте футуристический город Найт-Сити и станьте наемником в мире высоких технологий и низкой морали.',
+		categories: ['future', 'open world', 'tech'],
+	},
+	{
+		id: 2,
+		url: 'https://www.youtube.com/watch?v=MqQ3LeBgGDM&ab_channel=TheWitcher',
+		title: 'The Witcher 3: Wild Hunt',
+		description:
+			'Мир охвачен войной. Армия империи Нильфгаард стирает все на своем пути, стремясь добраться до самого сердца Северных королевств.',
+		categories: ['old', 'open world', 'fight'],
+	},
+]
+
+export const availableGames = []
