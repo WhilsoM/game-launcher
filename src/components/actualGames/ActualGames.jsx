@@ -1,25 +1,37 @@
+import { AnimatePresence, motion } from 'framer-motion'
 import { games } from '../../services/server.js'
+import Game from '../game/Game.jsx'
 import classes from './ActualGames.module.scss'
 
 const ActualGames = () => {
 	return (
 		<div className={classes.actualGames}>
-			<div className={classes.info}>
-				<h2 className='title'>Actual Games</h2>
-			</div>
+			<motion.div className={classes.info}>
+				<h2 className='title'>Actual Games </h2>
+			</motion.div>
 
-			<div className={classes.games}>
-				{games.map((game) => (
-					<div className={classes.wrapper__img} key={game.id}>
-						<img className={classes.imgGame} src={game.img} alt={game.title} />
-
-						<div className={classes.infoOfGame}>
-							<p className={classes.gameTitle}>{game.title}</p>
-							<p className={classes.gamePrice}>{game.price}$</p>
-						</div>
-					</div>
-				))}
-			</div>
+			<AnimatePresence>
+				{
+					<motion.div
+						className={classes.games}
+						initial={{ height: 0, opacity: 0 }}
+						animate={{ height: 'auto', opacity: 1 }}
+						exit={{ height: 0, opacity: 0 }}
+						transition={{ duration: 1 }}
+					>
+						{games.map((game, index) => (
+							<motion.div className={classes.wrapper__img} key={game.id}>
+								<Game
+									index={index}
+									title={game.title}
+									price={game.price}
+									img={game.img}
+								/>
+							</motion.div>
+						))}
+					</motion.div>
+				}
+			</AnimatePresence>
 		</div>
 	)
 }

@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router'
 
 // Pages
 import Layout from './components/Layout'
+import Card from './pages/Card'
 import Category from './pages/Category'
 import Community from './pages/Community'
 import Downloads from './pages/Downloads'
@@ -27,6 +28,7 @@ function App() {
 					<Route path='downloads' element={<Downloads />} />
 					<Route path='settings' element={<Settings />} />
 					<Route path='help' element={<Help />} />
+					<Route path='card/:id' element={<Card />} />
 					<Route path='*' element={<NotFound />} />
 				</Route>
 			</Routes>

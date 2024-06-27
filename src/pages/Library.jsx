@@ -1,5 +1,9 @@
 const Library = () => {
-	return <div>Library</div>
+	return (
+		<div>
+			<h2 className='title'>Library</h2>
+		</div>
+	)
 }
 
 export default Library
