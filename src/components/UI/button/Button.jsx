@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 
-const Button = ({ handleClick, text, children, ...props }) => {
+const Button = ({ onClick, text, children, ...props }) => {
 	return (
 		<motion.button
-			onClick={handleClick}
+			onClick={onClick}
 			{...props}
 			whileHover={{ opacity: 0.7 }}
 			whileTap={{ backgroundColor: '#ddd' }}

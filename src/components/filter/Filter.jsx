@@ -30,7 +30,7 @@ const Filter = ({ data }) => {
 						}}
 						key={btn}
 						text={btn}
-						handleClick={() => handleFilter(btn)}
+						onClick={() => handleFilter(btn)}
 					/>
 				))}
 			</div>

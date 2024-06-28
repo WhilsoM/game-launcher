@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router'
 
+import Modal from '../modal/Modal'
 import Button from '../UI/button/Button'
 import Input from '../UI/input/Input'
 import UserInfo from '../userInfo/UserInfo'
 
+import emojiCry from '../../assets/img/emoji-crying.png'
 import inbox from '../../assets/img/inbox.png'
 import notification from '../../assets/img/notification.png'
 import search from '../../assets/img/search.png'
 import classes from './Header.module.scss'
 
 const Header = () => {
+	const [modalInboxActive, setModalInboxActive] = useState(false)
+	const [modalNotificActive, setModalNotificActive] = useState(false)
 	const location = useLocation()
 	const [showUploadButton, setShowUploadButton] = useState(
 		localStorage.getItem('showUploadButton') === 'true' ||
@@ -46,11 +50,17 @@ const Header = () => {
 
 				<div className={classes.wrapper__userActions}>
 					<div className={classes.wrapper__inboxNotific}>
-						<Button className={classes.inboxNotific}>
+						<Button
+							className={classes.inboxNotific}
+							onClick={() => setModalInboxActive(true)}
+						>
 							<img src={inbox} alt='inbox' />
 						</Button>
 
-						<Button className={classes.inboxNotific}>
+						<Button
+							className={classes.inboxNotific}
+							onClick={() => setModalNotificActive(true)}
+						>
 							<img src={notification} alt='notification' />
 						</Button>
 					</div>
@@ -77,6 +87,16 @@ const Header = () => {
 					)}
 				</div>
 			</div>
+
+			<Modal active={modalInboxActive} setActive={setModalInboxActive}>
+				<h2>Inbox is empty!</h2>
+				<img src={emojiCry} alt='emojiCry' />
+			</Modal>
+
+			<Modal active={modalNotificActive} setActive={setModalNotificActive}>
+				<h2>Notification is empty!</h2>
+				<img src={emojiCry} alt='emojiCry' />
+			</Modal>
 		</header>
 	)
 }
