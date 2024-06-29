@@ -7,7 +7,7 @@ const ActualGames = () => {
 	return (
 		<div className={classes.actualGames}>
 			<motion.div className={classes.info}>
-				<h2 className='title'>Actual Games </h2>
+				<h2 className={`${classes.actualGamesTitle} title`}>Actual Games </h2>
 			</motion.div>
 
 			<AnimatePresence>

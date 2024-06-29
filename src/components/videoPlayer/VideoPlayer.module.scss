@@ -4,4 +4,10 @@
 	div {
 		border-radius: 15px;
 	}
+
+	@media (max-width: 600px) {
+		& {
+			display: none;
+		}
+	}
 }

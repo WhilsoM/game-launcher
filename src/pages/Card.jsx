@@ -10,19 +10,24 @@ const Card = () => {
 	const game = games[id]
 
 	return (
-		<main className={classes.mainCard}>
-			<NavLink to='/'>Back</NavLink>
-			<div>
-				<img className={classes.img} src={game.img} alt={game.title} />
-			</div>
+		<>
+			<NavLink to='/' className={classes.linkHome}>
+				Back
+			</NavLink>
 
-			<div className={classes.infoCard}>
-				<h2 className='title'>{game.title} </h2>
+			<div className={classes.wrapper}>
+				<div>
+					<img className={classes.img} src={game.img} alt={game.title} />
+				</div>
 
-				<p className={classes.description}>{game.description}</p>
-				<Button className={classes.btnBuyNow}>Buy now</Button>
+				<div className={classes.infoCard}>
+					<h2 className='title'>{game.title}</h2>
+
+					<p className={classes.description}>{game.description}</p>
+					<Button className={classes.btnBuyNow}>Buy now</Button>
+				</div>
 			</div>
-		</main>
+		</>
 	)
 }
 
