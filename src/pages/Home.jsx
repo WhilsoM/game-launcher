@@ -3,10 +3,10 @@ import VideoPlayer from '../components/videoPlayer/VideoPlayer'
 
 const Home = () => {
 	return (
-		<main>
+		<>
 			<VideoPlayer />
 			<ActualGames />
-		</main>
+		</>
 	)
 }
 

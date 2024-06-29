@@ -18,9 +18,22 @@
 
 .games {
 	display: grid;
-	grid-template-columns: repeat(3, 380px);
-	gap: 25px;
-	overflow: hidden;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+
+	@media (max-width: 1129px) {
+		& {
+			gap: 25px;
+
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: center;
+		}
+	}
+
+	@media (max-width: 789px) {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
 }
 
 .wrapper__img {

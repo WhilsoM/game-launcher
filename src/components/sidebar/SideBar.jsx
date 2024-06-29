@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 // Images
 import categories from './../../assets/img/categories.png'
 import community from './../../assets/img/community-hash.png'
-import donwloads from './../../assets/img/donwloads.png'
+import downloads from './../../assets/img/downloads.png'
 import friends from './../../assets/img/friends.png'
 import help from './../../assets/img/help.png'
 import home from './../../assets/img/home.png'
@@ -44,14 +44,14 @@ const SideBar = () => {
 				</NavLink>
 				<NavLink to='/friends' className={setActive}>
 					<img src={friends} alt='friends' className={classes.category} />
-					Friends <span className={classes.badge}>2</span>
+					Friends
 				</NavLink>
 				<NavLink to='/wishlist' className={setActive}>
 					<img src={wishlist} alt='wishlist' className={classes.category} />
 					Wishlist
 				</NavLink>
 				<NavLink to='/downloads' className={setActive}>
-					<img src={donwloads} alt='donwloads' className={classes.category} />
+					<img src={downloads} alt='downloads' className={classes.category} />
 					Downloads
 				</NavLink>
 
@@ -67,14 +67,12 @@ const SideBar = () => {
 				</div>
 			</nav>
 			<div className={classes.promo}>
-				<motion.p>50% discount on the games in the selection</motion.p>
-				<motion.button
-					whileHover={{ rotate: 360 }}
-					whileFocus={{ opacity: 0.5 }}
-					className={classes.promoButton}
-				>
+				<p style={{ marginBottom: 25 }}>
+					50% discount on the games in the selection
+				</p>
+				<NavLink to='/library' className={classes.promoButton}>
 					Go to library
-				</motion.button>
+				</NavLink>
 			</div>
 		</aside>
 	)

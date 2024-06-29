@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 .imgGame {
-	width: 380px;
+	width: 20em;
 	height: 470px;
 	border-radius: 15px;
 }
@@ -9,15 +9,15 @@
 	position: absolute;
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	bottom: 14px;
-	left: 15px;
+	left: 11px;
 	align-items: flex-start;
 	color: $colorFont;
 }
 
 .gameTitle {
 	margin-bottom: 5px;
-	line-height: 1.1;
 	font-size: 20px;
 	font-weight: 600;
 	background-color: rgba($black, 0.7);

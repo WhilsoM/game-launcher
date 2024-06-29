@@ -1,10 +1,10 @@
 import { friends } from '../../services/server.js'
 import Friend from '../friend/Friend'
 
-const FriendsOnline = () => {
+const FriendsOnline = ({ title = 'Friends online' }) => {
 	return (
 		<div style={{ marginBottom: '30px' }}>
-			<h2 className='title'>Friends online</h2>
+			<h2 className='title'>{title}</h2>
 
 			<div>
 				{friends.map((friend) => (

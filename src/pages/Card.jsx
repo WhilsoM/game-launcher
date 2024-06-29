@@ -1,6 +1,7 @@
 import { useParams } from 'react-router'
-
+import { NavLink } from 'react-router-dom'
 import Button from '../components/UI/button/Button'
+
 import { games } from '../services/server'
 import classes from './../styles/Card.module.scss'
 
@@ -10,6 +11,7 @@ const Card = () => {
 
 	return (
 		<main className={classes.mainCard}>
+			<NavLink to='/'>Back</NavLink>
 			<div>
 				<img className={classes.img} src={game.img} alt={game.title} />
 			</div>

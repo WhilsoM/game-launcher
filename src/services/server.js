@@ -163,4 +163,20 @@ export const videos = [
 ]
 
 // мб сделать на странице библиотеки "имеющиеся" игры
-export const availableGames = []
+export const availableGames = [
+	{
+		id: 1,
+		title: 'God of War',
+		img: 'http://surl.li/hmcwfm',
+	},
+	{
+		id: 2,
+		title: 'Horizon Zero Dawn',
+		img: 'http://surl.li/siczes',
+	},
+	{
+		id: 3,
+		title: 'Mario & Luigi',
+		img: 'http://surl.li/uopfap',
+	},
+]

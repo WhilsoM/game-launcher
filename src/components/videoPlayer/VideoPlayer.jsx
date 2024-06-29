@@ -19,11 +19,6 @@ const VideoPlayer = () => {
 			<ReactPlayer
 				light
 				url={videos[currentUrlIndex].url}
-				config={{
-					youtube: {
-						playerVars: { cc_load_policy: 0 },
-					},
-				}}
 				width='100%'
 				height='640px'
 				playing
